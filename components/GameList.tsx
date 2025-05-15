@@ -32,17 +32,15 @@ const GameList = ({
 
   return (
     <div>
-      {games.map((game) => (
-        <GameCard key={game.id} game={game} />
-      ))}
-      <div>
-        <button disabled={page === 1} onClick={() => setPage((p) => p - 1)}>
-          Previous
-        </button>
+      <div className="flex gap-4 overflow-x-auto p-4 bg-gray-50 rounded-lg">
+        {games.map((game) => (
+          <GameCard key={game.id} game={game} />
+        ))}
+      </div>
+      <div className="text-center mt-4">
+        <button disabled={page === 1} onClick={() => setPage(p => p - 1)}>Previous</button>
         <span> Page {page} of {totalPages} </span>
-        <button disabled={page === totalPages} onClick={() => setPage((p) => p + 1)}>
-          Next
-        </button>
+        <button disabled={page === totalPages} onClick={() => setPage(p => p + 1)}>Next</button>
       </div>
     </div>
   );
