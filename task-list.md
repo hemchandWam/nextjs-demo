@@ -1,0 +1,3 @@
+- [ ] Define DB schema for users, checklists, tasks, dependencies  
+- [ ] Build API to create and fetch checklists  
+- [ ] Build API to add tasks and support task dependencies
